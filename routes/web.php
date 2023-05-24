@@ -14,12 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $prova = [
-        'ciao' => 'come',
-        'stai' => '?',
-        'tutto' => 'bene',
-        'almeno' => 'credo'
-    ];
-    // dd($prova);
     return view('home');
 });

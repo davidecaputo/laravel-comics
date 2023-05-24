@@ -12,7 +12,7 @@ body{
             display: block;
             content: '';
             width: 100%;
-            height: 235%;
+            height: 264%;
             border-bottom: 4px solid transparent;
             }
 
@@ -22,6 +22,20 @@ body{
 
             &:hover::after, &.active::after{
                 border-bottom: 4px solid #2b82f9;
+            }
+        }
+    }
+    main{
+        .jumbotron{
+            width: 100%;
+            height: 500px;
+            background-image: url(../../public/images/jumbotron.jpg);
+        }
+        li{
+            width: 30%;
+
+            & img{
+                width: 30%;
             }
         }
     }
