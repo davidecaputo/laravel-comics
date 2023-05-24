@@ -6,7 +6,14 @@
 </div>
 <div class="bg-dark p-4">
     <div class="container py-5 d-flex flex-wrap gap-5">
-
+        @foreach ($comics as $comic)
+        <a href="#">
+            <div class="dc-card h-100">
+                <img src="{{ $comic['image'] }}" :alt="">
+                <span class="text-white">{{ $comic['title'] }}</span>
+            </div>
+        </a>
+        @endforeach
     </div>
 </div>
 <div class="bg-primary">
