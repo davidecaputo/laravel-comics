@@ -19,3 +19,13 @@ Route::get('/', function () {
         ];
     return view('home', $data);
 });
+
+Route::get('users/{id}', function ($id) {
+    $comics = config('comics');
+    if($id >= 0 && $id < count($comics)){
+        $comic = $comics[$id];
+        return view('pages.info', compact('comic'));
+    } else {
+        return abort(404);
+    }
+})->name('pages.info');
