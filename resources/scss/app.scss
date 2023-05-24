@@ -1,1 +1,42 @@
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    li{
+        list-style: none;
+    }
+    header{
+        li{
+            cursor: pointer;
+
+            &::after{
+            display: block;
+            content: '';
+            width: 100%;
+            height: 235%;
+            border-bottom: 4px solid transparent;
+            }
+
+            &:hover, &.active{
+                color: #2b82f9;
+            }
+
+            &:hover::after, &.active::after{
+                border-bottom: 4px solid #2b82f9;
+            }
+        }
+    }
+    footer{
+        .footer-up{
+            background-image: url(../../public/images/footer-bg.jpg);
+            background-size: cover;
+        }
+
+        .logo{
+            width: 30%;
+            background-image: url(../../public/images/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
